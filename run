@@ -1,14 +1,19 @@
 #!/usr/bin/env bash
 
 echo "*************************************************************************"
-echo "Cleaning workspace..."
+echo "Running exercise..."
+
+./clean
 
 cd get-hash || exit
-rm -rf node_modules
-rm -rf ./*.tgz
-rm -rf package-lock.json
+npm i
+npm pack
 
 cd ../app || exit
-rm -rf node_modules
-rm -rf package-lock.json
+npm i
+npm start
+
 cd ..
+sleep 2
+
+./audit-loader-utils

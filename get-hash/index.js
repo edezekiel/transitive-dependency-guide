@@ -9,6 +9,7 @@ const resolveUrlLoaderPackage = require('resolve-url-loader/package.json');
  */
 function getHash(input) {
   // Just demonstrating that we're using the package
+  
   return `Processing ${input} with resolve-url-loader v${resolveUrlLoaderPackage.version || 'unknown'} (which uses loader-utils as a transitive dependency)`;
 }
 

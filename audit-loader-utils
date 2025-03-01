@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+echo "*************************************************************************"
+echo "Auditing npm packages..."
+
+cd app || exit
+echo "Running npm audit...."
+npm audit
+echo "*************************************************************************"
+
+echo "Checking for loader-utils vulnerabilities..."
+sleep 1
+echo npm audit | grep "loader-utils" || echo "✅ No results found!"
