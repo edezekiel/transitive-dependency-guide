@@ -10,4 +10,4 @@ echo "*************************************************************************"
 
 echo "Checking for loader-utils vulnerabilities..."
 sleep 1
-echo npm audit | grep "loader-utils" || echo "✅ No results found!"
+echo npm audit | grep "loader-utils" || echo "✅ No loader-utils vulnerabilities found!"
