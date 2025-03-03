@@ -1,0 +1,12 @@
+{
+  "name": "transitive-dependency-guide",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "./run"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
