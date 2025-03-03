@@ -7,6 +7,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "resolve-url-loader": "^3.1.2"
+    "resolve-url-loader": "3.1.2"
   }
 }
