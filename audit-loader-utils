@@ -8,6 +8,17 @@ echo "*************************************************************************"
 echo "Running npm audit...."
 npm audit
 
-echo "Checking for loader-utils vulnerabilities..."
+function audit_loader_utils() {
+  npm audit | grep "loader-utils" || echo "✅ No loader-utils vulnerabilities found!"
+}
+
+echo "*************************************************************************"
+echo "Checking for loader-utils vulnerabilities BEFORE running npm update..."
 sleep 1
-npm audit | grep "loader-utils" || echo "✅ No loader-utils vulnerabilities found!"
+audit_loader_utils
+
+echo "*************************************************************************"
+echo "Running npm update..."
+sleep 1
+npm update
+audit_loader_utils

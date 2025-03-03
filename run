@@ -6,14 +6,17 @@ echo "Running exercise..."
 ./clean
 
 cd get-hash || exit
-npm i
+npm ci
 npm pack
 
 cd ../app || exit
-npm i
+npm ci
 npm start
 
 cd ..
 sleep 2
 
 ./audit-loader-utils
+
+# Reset changes to package-lock caused by `npm update`
+./clean
