@@ -4,9 +4,9 @@ echo "*************************************************************************"
 echo "Auditing npm packages..."
 
 cd app || exit
+echo "*************************************************************************"
 echo "Running npm audit...."
 npm audit
-echo "*************************************************************************"
 
 echo "Checking for loader-utils vulnerabilities..."
 sleep 1
